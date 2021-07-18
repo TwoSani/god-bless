@@ -63,7 +63,11 @@ void EllipseDraw() {
 void RectangleDraw() {
 	system("cls");
 	float b, a;
-	cout << "Enter the sides of the rectangle: A and B"; cin >> a >> b;
+	cout << "Enter the sides of the rectangle: A and B: "; cin >> a >> b;
+	if (a == b){
+		cout << "Wrong numbers! The <<A>> value will be increased by 50";
+		a += 50;
+	}
 
 	RenderWindow window(VideoMode(widght, high), "Rectangle");
 	while (window.isOpen()) {
